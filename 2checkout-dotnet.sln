@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoCheckout", "TwoCheckout\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoCheckout.Tests", "TwoCheckout.Tests\TwoCheckout.Tests.csproj", "{84DFCD28-C7BB-4873-83AC-2FC647BF53A5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{73203DE6-10E4-468D-B7BA-3E9D7AE60377}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.ps1 = nuget.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
