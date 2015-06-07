@@ -16,6 +16,7 @@ namespace Twocheckout.Tests
         {
             TwoCheckoutConfig.PrivateKey = "99999999999999999999";
             TwoCheckoutConfig.SellerID = "1817037";
+            TwoCheckoutConfig.Sandbox = true;
         }
 
         // API Authorization
@@ -24,6 +25,8 @@ namespace Twocheckout.Tests
         {
             try
             {
+
+
                 var Service = new ChargeService();
 
                 var Option1 = new AuthLineitemOption();
