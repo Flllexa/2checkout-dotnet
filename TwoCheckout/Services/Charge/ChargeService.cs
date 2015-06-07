@@ -44,11 +44,11 @@ namespace TwoCheckout
             return Link.ToString();
         }
 
-        public Authorization Authorize(ChargeAuthorizeServiceOptions options)
+        public Authorization Authorize(ChargeAuthorizeServiceOptions options, string privatekey = null, string sellerId = null)
         {
-            options.privateKey = TwoCheckoutConfig.PrivateKey;
-            options.sellerId = TwoCheckoutConfig.SellerID;
-            String Result = TwoCheckoutUtil.Request("checkout/api/1/" + TwoCheckoutConfig.SellerID + "/rs/authService", "POST", "payment", options);
+            options.privateKey = privatekey ?? TwoCheckoutConfig.PrivateKey;
+            options.sellerId = sellerId ?? TwoCheckoutConfig.SellerID;
+            String Result = TwoCheckoutUtil.Request("checkout/api/1/" + options.sellerId + "/rs/authService", "POST", "payment", options);
             return TwoCheckoutUtil.MapToObject<Authorization>(Result, "response");
         }
     }
